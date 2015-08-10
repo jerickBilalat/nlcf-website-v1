@@ -1,0 +1,69 @@
+//* main-header
+//******************************
+//******************************
+
+.main-header
+	position: relative
+	height: 270px
+	background-color: #fff
+	padding-bottom: 20px
+	margin-bottom: 40px
+
+.top-info-bar
+	background-color: #ccc
+	clear: both
+	+padding(10px)
+	span:last-child
+		float: right
+
+
+.main-logo
+	+position(absolute, null null 0 20px)
+	vertical-align: bottom
+	img
+		width: 260px
+		height: auto
+
+#main-nav
+	+position(absolute, null 20px 20px null)
+	vertical-align: bottom
+	li
+		display: inline-block
+		a
+			+padding(10px)
+
+//* footer
+//******************************
+//******************************
+
+footer
+	background-color: #ccc
+	height: 60px
+	.footer-logo
+		float: left
+		+size(40px)
+		+margin(10px 20px null 20px)
+	#footer-nav
+		float: left
+		+margin(20px 40px null null)
+		li
+			display: inline-block
+			a
+				font-size: .8em
+				+padding(3px)
+	p
+		float: left
+		font-size: .8em
+		margin-top: 20px
+	.social-media
+		float: right
+		margin-right: 20px
+		p
+			display: inline-block
+			font-size: .8em
+			margin-right: 10px
+		img
+			display: inline-block
+			margin-top: 15px
+			margin-left: 5px
+			+size(20px)
