@@ -1,6 +1,6 @@
 $( document ).ready(function() {
 
-// index slideshow
+// index slider
   $(function() {
           $(".rslides").responsiveSlides();
           });
