@@ -2,17 +2,28 @@ $(function() {
 	eventsBlt();
 	ministriesBlt();
 	ministriesLoad();
+	mediaLoad();
 	mediaLightBox();
 	closeButton();
 });
 
+// Events apps
 function eventsBlt() {
-	$('#month-selector').on('click', '.month-name', function() {
-		$('.blt').css('left','-100%');
-		$('.calendar-load').show();
+	$.ajaxSetup({ cache: true });
+	$('#month-selector').on('click', '.month-name', function(event) {
+		var $this = $(this),
+			newFolder = $this.data('folder'),
+			spinner = '<div class="loader">Loading...</div>',
+			newHTML = '../pages/calendar/'+newFolder+'.html';
+		event.preventDefault();
+		$('.selected-month').removeClass('selected-month');
+		$this.toggleClass('selected-month');
+		$('.current-month').css('display', 'none');
+		$('.calendar-load').css('display', 'block').load(newHTML);
 	});
 }
 
+// Minitries  apps
 function ministriesBlt() {
 	$('figure, figcaption').on('click', '.view-more', function() {
 		$('.blt').css('left','-100%');
@@ -29,10 +40,22 @@ function ministriesLoad() {
 	$.ajaxSetup({ cache: true });
 	$('figure, figcaption').on('click', '.view-more', function() {
 		var $this = $(this),
-				newFolder = $this.data('folder'),
-				spinner = '<div class="loader">Loading...</div>',
-				newHTML = '../pages/ministries-pages/'+newFolder+'.html';
+			newFolder = $this.data('folder'),
+			spinner = '<div class="loader">Loading...</div>',
+			newHTML = '../pages/ministries-pages/'+newFolder+'.html';
 		$('.column-2').html(spinner).load(newHTML);
+	});
+}
+
+// Media apps
+function mediaLoad() {
+	$.ajaxSetup({ cache: true });
+	$('#sideInfo').on('click', '.series-selector', function() {
+		var $this = $(this),
+			newFolder = $this.data('folder'),
+			spinner = '<div class="loader">Loading...</div>',
+			newHTML = '../pages/media-pages/'+newFolder+'.html';
+		$('#sermonLoad').html(spinner).load(newHTML);
 	});
 }
 
@@ -49,7 +72,6 @@ function mediaLightBox() {
 
 function closeButton() {
 	$('#closeButton').on('click', function() {
-		console.log('the button was click');
 		$('#media-lightbox').css('display', 'none');
 		$('body').css('overflow', 'initial');
 		$(this).css('display', 'none');

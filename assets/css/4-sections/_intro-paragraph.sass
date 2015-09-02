@@ -1,0 +1,29 @@
+.intro-paragraph
+	+margin(30px 10px 20px)
+	border-top: 1px solid gray
+	border-bottom: 1px solid gray
+	+clearfix
+	
+	h1
+		+margin(-27px auto 10px)
+		width: 200px
+		background-color: white
+		text-align: center
+		color: $darkgreen
+	
+	p
+		width: 85%
+		margin: 0 auto 10px
+		+padding(null 20px null 20px)
+		font-size: 1.2em
+		
+		@media (max-width: 664px)
+			font-size: 1em
+		@media (max-width: 558px)
+			width: 95%
+		@media (max-width: 459px)
+			padding: 0
+		@media (max-width: 375px)
+			margin: 0 5px 10px
+			width: 100%
+			font-size: 0.9em

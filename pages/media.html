@@ -53,33 +53,37 @@
         </a>
       </div>
   <!-- Start nav -->
-      <nav>
-        <ul id="main-nav">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li class="more_nav"><a href="pages/ministries.html">Ministries <span class="arrow">&#9660;</span></a>
-            <!-- <ul class="dropdown_nav dropdown_nav2">
-              <li><a href="pages/ministry_kids.html">Kids</a></li>
-              <li><a href="pages/ministry_youth.html">Youth</a></li>
-              <li><a href="pages/ministry_pnw.html">Praise and Worship</a></li>
-              <li><a href="pages/ministry_youngadults.html">Young Adults</a></li>
-              <li><a href="pages/ministry_women.html">Women</a></li>
-              <li><a href="pages/ministry_men.html">Men</a></li>
-              <li><a href="pages/smallgroups.html">Small Groups</a></li>
-              <li><a href="pages/ministries.html">All Ministries</a></li>
-            </ul> --> 
+      <nav id="main-nav">
+        <ul>
+          <li>
+            <div class"nav-item-cont">
+              <a href="../index.html">Home</a>
+            </div>
           </li>
-          <li class="more_nav"><a href="../pages/events.html">Events</a></li>
-          <li class="more_nav selected"><a href="../pages/media.html">Media</a></li>
-          <li class="more_nav"><a href="../pages/contact.html">Contact</a></li>
-          <!-- <li class="more"><a href="#">More <span class="arrow">&#9660;</span></a>
-            <ul class="dropdown_nav">
-              <li><a href="pages/ministries2.html">Ministries</a></li>
-              <li><a href="pages/events.html">Events</a></li>
-              <li><a href="pages/media.html">Media</a></li>
-              <li><a href="pages/contact.html">Contact</a></li>
-            </ul>
-          </li> -->
+          <li>
+            <div class"nav-item-cont">
+              <a href="../pages/about.html">About</a>
+            </div>
+          </li>
+          <li class="more_nav">
+            <div class"nav-item-cont">
+              <a href="../pages/ministries.html">Ministries</a></div>
+          </li>
+          <li class="more_nav">
+            <div class"nav-item-cont">
+              <a href="../pages/events.html">Events</a>
+            </div>
+          </li>
+          <li class="more_nav">
+            <div class"nav-item-cont">
+              <a href="../pages/media.html" class="selected">Media</a>
+            </div>
+          </li>
+          <li class="more_nav">
+            <div class"nav-item-cont">
+              <a href="../pages/contact.html">Contact</a>
+            </div>
+          </li>
         </ul>
       </nav>
   <!-- End nav -->
@@ -88,28 +92,59 @@
 
 
     <section class="row ft">
-      <div class="ft-col ft-col-1">
+      <div class="full-title"><h2>Media</h2></div>
+    <!-- Start slider -->
+      <div class="ft-col ft-col-1 slider">
         <div class="blt">
-          <div class="blt-col latest-sermon">
-            <img src="../assets/img/pages/page-index/galatians-sermon.jpg">
-          </div>
-          <div class="blt-col series-load">
-            <h1>Series Load</h1>
+          <div class="blt-col sermon">
+            <img src="../assets/img/pages/page-index/nlcf_group.jpg" alt="">
+            <div id="sermonLoad">
+              <div class="audio_wrapper">
+                <div id="audio1">
+                  <p class="audio_info"><strong>Febuary 22, 2015 |</strong> 
+                  Series on Galatians Part 4
+                  </p>
+                  <audio controls>
+                      <source src="../assets/audio/portrait_marraige.mp3" type="audio/mp3">
+                      <source src="../assets/audio/portrait_marraige.ogg" type="audio/ogg">
+                    You're browser does not support the audio elements
+                  </audio>
+                </div> 
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="ft-col ft-col-2">
-        <div class="blt">
-          <div class="blt-col">
-            <h4>Semon Series1</h4>
-            <h4>Sermon Series2</h4>
-          </div>
-          <div class="blt-col">
-            <h4>Semon Series3</h4>
-            <h4>Sermon Series4</h4>
-          </div>
+<!-- End slider -->
+
+<!-- Start side-info -->
+    <section id="sideInfo">
+      <div class="side-row series-marraige">
+        <img src="../assets/img/pages/page-index/side-info-col1.gif">
+        <div>
+          <a class="series-selector"data-folder="marraige">
+            <h6>Biblical Portriate of Marraige</h6>
+            </a>
         </div>
       </div>
+      <div class="side-row series-galatians">
+          <img src="../assets/img/pages/page-index/side-info-col2.gif">
+          <div>
+            <a class="series-selector"data-folder="galatians"> 
+              <h6>Series on Galatians</h6>
+            </a>
+          </div>
+      </div>
+      <div class="side-row serires-upcoming">
+        <img src="../assets/img/pages/page-index/side-info-col3.gif">
+        <div>
+          <a class="series-selector"data-folder="upcoming"> 
+              <h6>Upcoming Series</h6>
+          </a>
+        </div>
+      </div>
+    </section>
+<!-- Start side-info -->
     </section>
     <hr class="row">
 

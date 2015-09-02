@@ -1,28 +1,10 @@
-
-.ft
-	+outer-container
-	+clearfix
-	.ft-col
-		overflow-x: hidden
-		.blt
-			width: 200%
-			position: relative
-			.blt-col
-				width: 50%
-				float: left
-				margin: 0
-.ft-col-1
-	+span-columns(8)
-.ft-col-2
-	+span-columns(4)
-.ft-col-full
-	+span-columns(12)
-
-
+.border
+	border-bottom: 1px solid gray
+	margin-bottom: 40px
 .ft-col-1
 	@media(max-width: 768px)
 		+span-columns(12)
-#sideInfo
+#index-side-info
 	+span-columns(4)
 	.side-row
 		position: relative
@@ -38,7 +20,6 @@
 			background-color: rgba(0, 0, 0, 0.36)
 			&:hover
 				background-color: rgba(0, 0, 0, 0.26)
-				cursor: pointer
 			a
 				width: 100%
 				height: 100%
@@ -74,7 +55,10 @@
 					bottom: 11px
 			div
 				width: 50%
-				height: 50%
+				height: 70%
 				a
 					h6
 						margin-top: 5px
+			img
+				min-height: 90px
+		

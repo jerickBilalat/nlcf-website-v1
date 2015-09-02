@@ -1,0 +1,144 @@
+//* main-header
+//******************************
+//******************************
+
+.main-header
+    position: relative
+    height: 270px
+    background-color: #F3F3F3
+    margin-bottom: 20px
+
+.top-info-bar
+    background-color: $darkgreen
+    clear: both
+    +padding(10px)
+    span:nth-child(2)
+        .location
+        padding: 5px
+        cursor: pointer
+        border: 1px solid #bbb
+        a
+            display: none
+        &:hover
+            a
+                +transition(all 2s ease-in-out)
+                display: initial
+
+    span:last-child
+        float: right
+
+.main-logo
+    position: absolute
+    left: 50%
+    width: 260px
+
+    a
+        position: relative
+        left: -50%
+        background-color: transparent
+        display: block
+        width: 100%
+
+        img
+            width: 100%
+            height: auto
+
+#main-nav
+    ul
+        +display(flex)
+
+        +flex-wrap($value: wrap)
+
+        margin: 20px
+
+        li
+            width: 50%
+            margin-bottom: 20px
+
+            &:nth-child(odd)
+                div a
+                    +transition(all 0.4s ease-in-out)
+
+                    &:hover
+                        padding-left: 10px
+                        border-bottom: 2px solid $lightgreen
+
+            &:nth-child(even)
+                div a
+                    +transition(all 0.4s ease-in-out)
+
+                    float: right
+                    text-align: right
+
+                    &:hover
+                        padding-right: 10px
+                        border-bottom: 2px solid $lightgreen
+
+            &:nth-child(5),
+            &:nth-child(6)
+                margin-bottom: 0
+
+            div
+                height: 40px
+
+                a
+                    line-height: 1.5em
+                    font-size: 18px
+                    display: block
+                    width: 100px
+                    height: 100%
+                    border-bottom: 1px solid $gray
+                    color: #756E6B
+
+                a.selected
+                    color: #A1D1BC
+                    border-bottom: 2px solid $lightgreen
+
+//* footer
+//******************************
+//******************************
+
+footer
+    background-color: $darkgreen
+    height: 60px
+
+    .footer-logo
+        float: left
+
+        +size(40px)
+
+        +margin(10px 20px null 20px)
+
+    #footer-nav
+        float: left
+
+        +margin(20px 40px null null)
+
+        li
+            display: inline-block
+
+            a
+                font-size: 0.8em
+
+                +padding(3px)
+
+    p
+        float: left
+        font-size: 0.8em
+        margin-top: 20px
+
+    .social-media
+        float: right
+        margin-right: 20px
+
+        p
+            display: inline-block
+            font-size: 0.8em
+            margin-right: 10px
+
+        img
+            display: inline-block
+            margin-top: 15px
+            margin-left: 5px
+
+            +size(20px)
