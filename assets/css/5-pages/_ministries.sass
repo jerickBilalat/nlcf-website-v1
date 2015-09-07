@@ -46,14 +46,22 @@
 	img
 		margin-left: 25px
 
+
+
+// effect-julia figures layout
 figure.effect-julia
 	margin-top: 10px
-	width: 31%
-	margin-right: 2.5%
+	width: 32%
+	margin-right: 2%
 	&:nth-child(3),
 	&:nth-child(6)
 		margin-right: 0
-
+	@media(max-width: 980px)
+		width: 47.5%
+		&:nth-child(odd)
+			margin-right: 5%
+		&:nth-child(even)
+			margin-right: 0
 
 .ministry-feature-box
 	.ministry-feature-slider
@@ -62,6 +70,10 @@ figure.effect-julia
 		+span-columns(3)
 		font-size: 12px
 
+.ministry-gallery-column
+	padding: 0px 10px 20px
+	@media(max-width: 980px)
+		padding: 0px 10px 20px
 
 .ministry-load
 	// display: none

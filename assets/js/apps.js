@@ -5,34 +5,49 @@ $(function() {
 	mediaLoad();
 	mediaLightBox();
 	closeButton();
+	$('#mobileNav').slicknav();
+	$('.slick-slider').slick({
+		dots: true,
+		autoplay: true,
+		autoplaySpeed: 3000,
+	});
 });
 
-// Events apps
+
+
+// Event page functions
 function eventsBlt() {
 	$.ajaxSetup({ cache: true });
 	$('#month-selector').on('click', '.month-name', function(event) {
 		var $this = $(this),
 			newFolder = $this.data('folder'),
 			spinner = '<div class="loader">Loading...</div>',
-			newHTML = '../pages/calendar/'+newFolder+'.html';
+			calendarLoad = '../pages/calendar/'+newFolder+'.html',
+			monthEventsLoad = '../pages/calendar-events/'+newFolder+'.html';			
 		event.preventDefault();
 		$('.selected-month').removeClass('selected-month');
 		$this.toggleClass('selected-month');
 		$('.current-month').css('display', 'none');
-		$('.calendar-load').css('display', 'block').load(newHTML);
+		$('.month-events-load').load(monthEventsLoad);
+		$('.calendar-load').css('display', 'block').load(calendarLoad);
 	});
 }
 
-// Minitries  apps
+// Minitries  functions
 function ministriesBlt() {
+	$.ajaxSetup({ cache: true });
 	$('figure, figcaption').on('click', '.view-more', function() {
+		var $this = $(this),
+			newHTML = $this.data('folder');
+		$('.full-title').html('<h2>'+newHTML+'</h2>');
 		$('.blt').css('left','-100%');
 		$('.ministry-gallery.column, figure:last-child').hide();
 		$('.column-2').show();
 	});
 	$('.column-2').on('click', '.back', function() {
+		$('.full-title').html('<h2>Ministry</h2>');
 		$('.blt').css('left','0%');
-		$('.ministry-gallery.column, figure:last-child').show();
+		$('.ministry-gallery-column figure:last-child').show();
 	});
 }
 
@@ -47,7 +62,7 @@ function ministriesLoad() {
 	});
 }
 
-// Media apps
+// Media functions
 function mediaLoad() {
 	$.ajaxSetup({ cache: true });
 	$('#sideInfo').on('click', '.series-selector', function() {
@@ -77,3 +92,5 @@ function closeButton() {
 		$(this).css('display', 'none');
 	});
 }
+
+

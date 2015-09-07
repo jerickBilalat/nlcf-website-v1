@@ -20,14 +20,37 @@ table
     vertical-align: top
 
 
-#month-selector a
-  padding: 5px
-  display: inline-block
-  margin-left: 5px
-  color: $black
+#month-selector
+  background-color: $darkgreen
+  a
+    padding: 5px
+    display: inline-block
+    margin-left: 5px
+    color: white
+    background-color: $darkgreen
+    border-top: 4px solid $darkgreen
+    cursor: pointer
+    &:first-child
+      margin-left: 20px
+  .selected-month
+    background-color: white
+    color: black
 
-.selected-month
-  background-color: rgba(161,209,188,0.7)
+.month-events-load
+  display: none
+  @media(max-width: 480px)
+    display: initial
+  div
+    border: 1px solid gray
+    border-top: 0
+    padding: 10px
+    p
+      margin: 0 0 10px 0
+
+
+#calendar
+  @media(max-width: 480px)
+    display: none
 
 
 .current-month,
@@ -36,16 +59,23 @@ table
   table
     width: 100%
 
+
+
 .day
   text-align: right
 
 .notes
   font-family: Arial, Helvetica, sans-serif
   font-size: 90%
+  @media(max-width: 980px)
+    font-size: 80%
+  @media(max-width: 600px)
+    font-size: 70%
   text-align: right
   font-weight: bold
+
 .event
-  background: rgba(21,125,199,0.2)
+  background: rgba(52, 204, 65, 0.2)
 .weekend
   background-color: #F3F3F3
 
@@ -55,4 +85,6 @@ table
   margin-top: 35px
   p
     font-size: 12px
+  @media(max-width: 768px)
+    +span-columns(12)
     

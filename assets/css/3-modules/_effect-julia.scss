@@ -74,22 +74,9 @@ figure.effect-julia p:first-child {
   transition-delay: 0.15s;
 }
 
-figure.effect-julia p:nth-of-type(2) {
-  -webkit-transition-delay: 0.1s;
-  transition-delay: 0.1s;
-  margin-top: 40px;
-  padding: 5px;
-  width: 25%;
-}
-
 figure.effect-julia:hover p:first-child {
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-figure.effect-julia:hover p:nth-of-type(2) {
-  -webkit-transition-delay: 0.05s;
-  transition-delay: 0.05s;
 }
 
 figure.effect-julia:hover img {
