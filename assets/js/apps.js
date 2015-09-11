@@ -1,9 +1,11 @@
-$(function() {
+
+$(document).ready(function($) {
 	eventsBlt();
 	ministriesBlt();
 	ministriesLoad();
 	mediaLoad();
 	mediaLightBox();
+	sermonBlt();
 	closeButton();
 	$('#mobileNav').slicknav();
 	$('.slick-slider').slick({
@@ -11,6 +13,7 @@ $(function() {
 		autoplay: true,
 		autoplaySpeed: 3000,
 	});
+	initMap();
 });
 
 
@@ -40,11 +43,15 @@ function ministriesBlt() {
 		var $this = $(this),
 			newHTML = $this.data('folder');
 		$('.full-title').html('<h2>'+newHTML+'</h2>');
-		$('.blt').css('left','-100%');
-		$('.ministry-gallery.column, figure:last-child').hide();
+		// $('.blt').css('left','-100%');
+		$('.column-1').animate({width: 0}, 500);
+		$('html, body').animate({
+			scrollTop: $('.main-header').offset().top
+		}, 1000);
 		$('.column-2').show();
 	});
 	$('.column-2').on('click', '.back', function() {
+		$('.column-1').animate({width: "50%"}, 500);
 		$('.full-title').html('<h2>Ministry</h2>');
 		$('.blt').css('left','0%');
 		$('.ministry-gallery-column figure:last-child').show();
@@ -65,12 +72,25 @@ function ministriesLoad() {
 // Media functions
 function mediaLoad() {
 	$.ajaxSetup({ cache: true });
-	$('#sideInfo').on('click', '.series-selector', function() {
+	$('.sermon-buttons-cont').on('click', '.series-selector', function() {
 		var $this = $(this),
 			newFolder = $this.data('folder'),
 			spinner = '<div class="loader">Loading...</div>',
 			newHTML = '../pages/media-pages/'+newFolder+'.html';
 		$('#sermonLoad').html(spinner).load(newHTML);
+	});
+}
+
+function sermonBlt() {
+	$.ajaxSetup({ cache: true });
+	$('.sermon-buttons-cont').on('click', '.next-button', function() {
+		$('.sermons-blt').css('left', '-100%');
+		$('.prev-button').addClass('active');
+		console.log('test');
+	});
+	$('.sermon-buttons-cont').on('click', '.active', function() {
+		$('.sermons-blt').css('left', '0%');
+		console.log('test');
 	});
 }
 
@@ -93,4 +113,19 @@ function closeButton() {
 	});
 }
 
+function initMap() {
+  var myLatLng = {lat: 45.039746, lng: -93.180781};
+
+  var map = new google.maps.Map(document.getElementById('contactMap'), {
+    zoom: 16,
+    center: myLatLng,
+    scrollwheel: false
+  });
+
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    title: 'Hello World!'
+  });
+}
 

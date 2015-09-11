@@ -1,13 +1,87 @@
 .sermon
 	position: relative
 #sermonLoad
-	background-color: $silver
 	width: 100%
 	height: 100%
 	position: absolute
 	top: 0
 	left: 0
+	overflow: scroll
 
+
+.side-info-media
+	margin-right: 0
+	.side-row
+		&:nth-child(3)
+			margin-right: 2%
+	@media(max-width: 600px)
+		display: none
+
+
+// layout full-info-media
+.full-info-media
+	display: none
+	.sermons-window
+		float: left
+		width: 78%
+		overflow: hidden
+		.sermons-blt
+			position: relative
+			width: 200%
+			left: 0
+			+transition(all 0.6s ease-in-out)
+			.sermon-button
+				float: left
+				width: 24%
+				height: auto
+				&:first-child,
+				&:nth-child(2)
+					margin-right: 2%
+	.prev-button,
+	.next-button
+		float: left
+		width: 10%
+		text-align: center
+		margin-top: 5px
+		padding-top: 5px
+		padding-bottom: 5px
+		font-size: 2em
+		background-color: $darkgreen
+		cursor: pointer
+	.prev-button
+		margin-right: 1%
+	.next-button
+		margin-left: 1% 
+	@media(max-width: 600px)
+		display: initial
+
+// styles of full-info-media
+.sermon-button
+	position: relative
+	div
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		cursor: pointer
+		img
+			background-color: $darkgreen
+		a
+			display: block
+			width: 100%
+			height: 100%
+			position: relative
+			background-color: rgba(0, 0, 0, 0.26)
+			&:hover
+				background-color: rgba(0, 0, 0, 0.2)
+			h6
+				position: absolute
+				top: 50%
+				left: 10%
+				color: $silver
+
+// styles for the audio player
 .audio_wrapper
 	width: 100%
 	height: 100%
@@ -18,8 +92,13 @@
 	border: 2px solid #848484
 	border-radius: 10px
 	padding-bottom: 10px
+	h4
+		color: white
+		@media(max-width: 400px)
+			margin: 0
 	p
 		margin-bottom: 5px
+		color: white
 
 #audio1 
 	margin-bottom: 20px
@@ -32,6 +111,7 @@ audio
 	margin: 0 auto
 	display: block
 
+
 #media-photos
 	h2
 		font-family: $georgia
@@ -39,30 +119,88 @@ audio
 		margin-bottom: 0
 		padding-bottom: 20px
 
-figure
+.event-figure-cont
+	position: relative
 	float: left
-	width: 22%
-	margin-right: 1.5%
-	margin-left: 1.5%
-	p
-		margin-top: -50px
-		text-align: center
-		color: $white
-		visibility: hidden
+	width: 22.5%
+	&:nth-child(1)
+		margin-right: 1%
+		margin-left: 2%
+	&:nth-child(2),
+	&:nth-child(3)
+		margin-right: 1%
+		margin-left: 1%
+	&:nth-child(4)
+		margin-right: 2%
+		margin-left: 1%
+	.gallery-thumb
+		background:
+			position: 50% 50%
+			repeat: no-repeat
+			size: 100%
+	&:nth-child(1)
+		.gallery-thumb
+			background-image: url(../img/pages/page-media/wedding.jpg)
+	&:nth-child(2)
+		.gallery-thumb
+			background-image: url('../img/pages/page-media/familyday2015(2).jpg')
+	&:nth-child(3)
+		.gallery-thumb
+			background-image: url('../img/pages/page-media/fathersday2015(3).jpg')
+	&:nth-child(4)
+		.gallery-thumb
+			background-image: url(../img/pages/page-media/wedding.jpg)
+			
+	h6
+		position: absolute
+		top: -30px
+	span
+		position: absolute
+		top: -5px
+		left: -5px
+		width: 100%
+		height: 100%
+		display: block
+		border: 1px solid gray
+		z-index: 0
+	.gallery-thumb
+		position: relative
+		z-index: 1
+		width: 100%
+		vertical-align: middle
+		color: transparent
+		display: inline-block
 		cursor: pointer
 		&:hover
-			visibility: initial
-	img:hover
-		& + p
-			visibility: initial
+			border: 2px solid black
+		div
+			padding-top: 100%
+			display: block
+			height: 0
+
+
+	@media(max-width: 600px)
+		margin-bottom: 20px
+		&:nth-child(odd),
+			width: 46%
+			margin-left: 2%
+			margin-right: 2%
+		&:nth-child(even),
+			width: 46%
+			margin-left: 2%
+			margin-right: 2%
+
+
+
 #media-lightbox
 	display: none
 	background-color: rgba(12, 12, 12, 0.8)
 	width: 100%
-	height: 90%
+	height: 100%
 	position: absolute
 	top: 0
 	left: 0
+	z-index: 100
 	.lightbox-gal
 		position: relative
 		background-color: $black
@@ -87,3 +225,8 @@ figure
 	z-index: 400
 
 
+// typography
+.right-full-title
+	display: none
+	@media(max-width: 768px)
+		display: initial
