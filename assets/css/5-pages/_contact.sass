@@ -4,8 +4,10 @@
 	+outer-container
 	.contact-info-cont
 		+span-columns(7)
+		padding-top: 20px
 	.contact-form-cont
 		+span-columns(5)
+		padding-right: 10px
 	@media(max-width: 600px)
 		.contact-info-cont
 			+span-columns(12)
@@ -18,6 +20,10 @@
 // styles
 .contact-info-cont
 	border-right: 2px solid $silver
+	margin-bottom: 30px
+	@media(max-width: 600px)
+		margin-bottom: 20px
+		border-bottom: 1px solid $silver
 	div
 		padding: 0 10px
 		#contactMap
@@ -35,14 +41,21 @@
 			margin-bottom: 10px
 			margin-top: 10px
 			font-size: 0.9em
-		.tel
+		.info-buttons
+			display: inline-block
 			margin-bottom: 20px
+			margin-top: 30px
 			a
 				color: gray
 				border: 1px solid gray
 				border-radius: 5px
-				padding: 5px
-
+				padding: 10px
+			@media(max-width: 753px)
+				&:nth-child(5)
+					margin-top: 10px
+			@media(max-width: 285px)
+				&:nth-child(4)
+					margin-top: 10px
 .contact-form-cont
 	margin-top: 20px
 	padding-left: 10px

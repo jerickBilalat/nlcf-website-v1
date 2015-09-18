@@ -1,6 +1,7 @@
 .border
-	border-bottom: 1px solid gray
-	margin-bottom: 40px
+	border-bottom: 4px solid rgb(252,2,3)
+	margin: 0 auto 40px
+	width: 83%
 .ft-col-1
 	@media(max-width: 768px)
 		+span-columns(12)
@@ -13,3 +14,11 @@
 		button
 			&::before
 				font-size: 12px
+				@media(max-width: 540px)
+					font-size: 10px
+	@media(max-width: 540px)
+		bottom: 85%
+	@media(max-width: 479px)
+		left: 35%
+	@media(max-width: 400px)
+		bottom: 80%

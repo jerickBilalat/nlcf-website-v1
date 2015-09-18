@@ -14,6 +14,7 @@
     -->
 
     <title>NLCF</title>
+    <meta charset="utf-8">
     <!--information from "http://www.iacquire.com/blog/18-meta-tags-every-webpage-should-have-in-2013"-->
     <meta name="description" content="155 characters of message mathcing text with a call to action goes here">
     <meta rel="author" hre="https://plus.google.com/[YOUR PERSONAL G+ PROFILE HERE]"/><!--for the more modular vesion you wolud emulate XFN's rel-me nad place the link directly on the page. I've got to admit this is a great link building strategy-->
@@ -33,14 +34,13 @@
     <meta name="twitter:image" content="">
     <!--their are optional twitter tags-->
     <!--for google+ use schema.org see article for more details-->
-    <meta charset="utf-8">
-    <title>NLCF</title>
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="../assets/js/slicknav/slicknav.css">
+    <link rel="stylesheet" href="../assets/js/animsition/animsition.min.css">
     <link rel="stylesheet" href="../assets/css/main.css">
   </head>
 
-  <body>
+  <body class="animsition">
 
 <!-- Start main-header -->
       <header class="row main-header">
@@ -51,7 +51,7 @@
          target="_blank" title="New Life In Chirst Location">Go to map</a>
          </span>
           <span>
-            <a href="" title="New life in Christ Small Groups">Join our Small Group</a>
+            <a href="smallgroups.html" class="animsition-link" title="New life in Christ Small Groups">Join our Small Groups</a>
           </span>
         </div>
         <div class="logo main-logo">
@@ -64,31 +64,31 @@
           <ul>
               <li>
                 <div class"nav-item-cont">
-                  <a href="../index.html" class="selected">Home</a>
+                  <a href="../index.html" class="animsition-link">Home</a>
                 </div>
               </li>
               <li>
                 <div class"nav-item-cont">
-                  <a href="../pages/about.html">About</a>
+                  <a href="about.html" class="animsition-link">About</a>
                 </div>
               </li>
               <li>
                 <div class"nav-item-cont">
-                  <a href="../pages/ministries.html">Ministries</a></div>
+                  <a href="ministries.html" class="animsition-link">Ministries</a></div>
               </li>
               <li>
                 <div class"nav-item-cont">
-                  <a href="../pages/events.html">Events</a>
+                  <a href="events.html" class="selected animsition-link">Events</a>
                 </div>
               </li>
               <li>
                 <div class"nav-item-cont">
-                  <a href="../pages/media.html">Media</a>
+                  <a href="media.html" class="animsition-link">Media</a>
                 </div>
               </li>
               <li>
                 <div class"nav-item-cont">
-                  <a href="../pages/contact.html">Contact</a>
+                  <a href="contact.html" class="animsition-link">Contact</a>
                 </div>
               </li>
           </ul>
@@ -105,19 +105,19 @@
                   <a href="../index.html" class="selected">Home</a>
               </li>
               <li>
-                  <a href="../pages/about.html">About</a>
+                  <a href="about.html">About</a>
               </li>
               <li>
-                  <a href="../pages/ministries.html">Ministries</a>
+                  <a href="ministries.html">Ministries</a>
               </li>
               <li>
-                  <a href="../pages/events.html">Events</a>
+                  <a href="events.html">Events</a>
               </li>
               <li>
-                  <a href="../pages/media.html">Media</a>
+                  <a href="media.html">Media</a>
               </li>
               <li>
-                  <a href="../pages/contact.html">Contact</a>
+                  <a href="contact.html">Contact</a>
               </li>
           </ul>
         </nav>
@@ -128,6 +128,7 @@
     <div class="ft">
       <div class="full-title"><h2>Events</h2></div>
   		<div class="ft-col ft-col-1">
+        <div><span>Today is</span><p id="todayDate"></p></div>
         <div id="month-selector">
           <a class="month-name selected-month" data-folder="September">September</a>
           <a class="month-name" data-folder="October">October</a>
@@ -153,89 +154,105 @@
         <div id="calendar">
             <div class="current-month">
               <table class="table">
-                <caption>August</caption>
-                <col class="weekend">
-                <col class="weekday" span="5">
-                <col class="weekend">
-                <thead>
-                  <tr>
-                    <th>Sun</th>
-                    <th>Mon</th>
-                    <th>Tue</th>
-                    <th>Wed</th>
-                    <th>Thu</th>
-                    <th>Fri</th>
-                    <th>Sat</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><div class="day"></div></td>
-                    <td><div class="day"></div></td>
-                    <td><div class="day"></div></td>
-                    <td><div class="day"></div></td>
-                    <td><div class="day"></div></td>
-                    <td><div class="day"></div></td>
-                    <td><div class="day">1</div></td>
-                  </tr>
-                  <tr>
-                    <td class="event"><div class="day">2</div>
-                      <div class="notes">Communion Sunday</div>
-                    </td>
-                    <td><div class="day">3</div></td>
-                    <td><div class="day">4</div></td>
-                    <td><div class="day">5</div></td>
-                    <td><div class="day">6</div></td>
-                    <td><div class="day">7</div></td>
-                    <td><div class="day">8</div></td>
-                  </tr>
-                  <tr>
-                    <td class="event"><div class="day">9</div>
-                      <div class="notes">Communion &amp; Postbelss Sunday</div>
-                    </td>
-                    <td><div class="day">10</div></td>
-                    <td><div class="day">11</div></td>
-                    <td class="event"><div class="day">15</div>
-                      <div class="notes">Fellowship with the Wheatons</div>
-                    </td>
-                    <td><div class="day">12</div></td>
-                    <td><div class="day">13</div></td>
-                    <td><div class="day">14</div></td>
-                  </tr>
-                  <tr>
-                    <td><div class="day">15</div></td>
-                    <td><div class="day">16</div></td>
-                    <td><div class="day">17</div></td>
-                    <td><div class="day">18</div></td>
-                    <td><div class="day">19</div></td>
-                    <td class="event"><div class="day">20</div>
-                      <div class="notes"><b>Youth</b> Night &amp; <b>Best Years</b> Fellowship</div>
-                    </td>
-                    <td><div class="day">21</div></td>
-                  </tr>
-                  <tr>
-                    <td><div class="day">22</div></td>
-                    <td><div class="day">23</div></td>
-                    <td><div class="day">24</div></td>
-                    <td class="event"><div class="day">25</div>
-                      <div class="notes">Fellowship with the Wheatons
-                      </div>
-                    </td>
-                    <td><div class="day">26</div></td>
-                    <td><div class="day">27</div></td>
-                    <td><div class="day">28</div></td>
-                  </tr>
-                  <tr>
-                    <td><div class="day">29</div></td>
-                    <td><div class="day">30</div></td>
-                    <td><div class="day">31</div></td>
-                    <td><div class="day"></div></td>
-                    <td><div class="day"></div></td>
-                    <td><div class="day"></div></td>
-                    <td><div class="day"></div></td>
-                  </tr>
-                </tbody>
-              </table>
+  <caption>September</caption>
+  <col class="weekend">
+  <col class="weekday" span="5">
+  <col class="weekend">
+  <thead>
+    <tr>
+      <th>Sun</th>
+      <th>Mon</th>
+      <th>Tue</th>
+      <th>Wed</th>
+      <th>Thu</th>
+      <th>Fri</th>
+      <th>Sat</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><div class="day"></div></td>
+      <td><div class="day"></div></td>
+      <td><div class="day">1</div></td>
+      <td class="event"><div class="day">2</div>
+        <div class="notes">Maplewood Group
+        </div>
+      </td>
+      <td><div class="day">3</div></td>
+      <td class="event"><div class="day">4</div>
+        <div class="notes">North Metro &amp; Roseville Group
+        </div>
+      </td>
+       <td class="event"><div class="day">5</div>
+        <div class="notes">Woodbury Group
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="event"><div class="day">6</div>
+        <div class="notes">Communion &amp; Potbless Sunday
+        </div>
+      </td>
+      <td><div class="day">7</div></td>
+      <td><div class="day">8</div></td>
+      <td><div class="day">9</div></td>
+      <td><div class="day">10</div></td>
+      <td><div class="day">11</div></td>
+      <td class="event"><div class="day">12</div>
+        <div class="notes">Young Adults Group
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="event"><div class="day">13</div>
+        <div class="notes">Communion Sunday
+        </div>
+      </td>
+      <td><div class="day">14</div></td>
+      <td><div class="day">15</div></td>
+      <td class="event"><div class="day">16</div>
+        <div class="notes">Maplewood Group
+        </div>
+      </td>
+      <td><div class="day">17</div></td>
+      <td class="event"><div class="day">18</div>
+        <div class="notes">North Metro, Roseville, Best Years, &amp; Youth Group 
+        </div>
+      </td>
+      <td class="event"><div class="day">19</div>
+        <div class="notes">Woodbury Group
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="event"><div class="day">20</div>
+        <div class="notes">Quarterly Business Meeting &amp; Fall Activity
+        </div>
+      </td>
+      <td><div class="day">21</div></td>
+      <td><div class="day">22</div></td>
+      <td><div class="day">23</div></td>
+      <td><div class="day">24</div></td>
+      <td><div class="day">25</div></td>
+      <td class="event"><div class="day">26</div>
+        <div class="notes">Young Adults Group
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><div class="day">27</div></td>
+      <td><div class="day">28</div></td>
+      <td><div class="day">29</div></td>
+      <td class="event"><div class="day">30</div>
+        <div class="notes">Maplewood Group
+        </div>
+      </td>
+      <td><div class="day"></div></td>
+      <td><div class="day"></div></td>
+      <td><div class="day"></div></td>
+    </tr>
+  </tbody>
+</table>
             </div>
             <div class="calendar-load">
             </div>
@@ -245,7 +262,7 @@
       <section class="ft-col ft-col-2 events-side-info">
         <h4>Upcoming Event</h4>
         <p>
-        <strong>August 21, 21, &amp; 23 | </strong><em>Annual Family Camp</em><br>
+        <strong>August 29 | </strong><em>Fall Activity(TBD)</em><br>
         </p>
         <h4>Featured Events</h4>
         <p>
@@ -289,6 +306,7 @@
 
   <script type="text/javascript" src="../assets/js/jquery-2.1.4.min.js"></script>
   <script type="text/javascript" src="../assets/js/slicknav/jquery.slicknav.min.js"></script>
+  <script type="text/javascript" src="../assets/js/animsition/jquery.animsition.min.js"></script>
   <script type="text/javascript" src="../assets/js/apps.js"></script>
 	</body>
 </html>

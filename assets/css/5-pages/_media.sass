@@ -88,10 +88,11 @@
 	padding-top: 5%
 #audio1, #audio2 
 	width: 90%
-	margin: 0 auto
+	margin: 10px auto
 	border: 2px solid #848484
 	border-radius: 10px
 	padding-bottom: 10px
+	background-color: rgba(134, 135, 134, 0.8)
 	h4
 		color: white
 		@media(max-width: 400px)
@@ -100,8 +101,6 @@
 		margin-bottom: 5px
 		color: white
 
-#audio1 
-	margin-bottom: 20px
 
 .audio_info 
 	padding: 0
@@ -143,13 +142,13 @@ audio
 			background-image: url(../img/pages/page-media/wedding.jpg)
 	&:nth-child(2)
 		.gallery-thumb
-			background-image: url('../img/pages/page-media/familyday2015(2).jpg')
+			background-image: url('../img/pages/page-media/familyday.jpg')
 	&:nth-child(3)
 		.gallery-thumb
 			background-image: url('../img/pages/page-media/fathersday2015(3).jpg')
 	&:nth-child(4)
 		.gallery-thumb
-			background-image: url(../img/pages/page-media/wedding.jpg)
+			background-image: url(../img/pages/page-media/familycamp.jpg)
 			
 	h6
 		position: absolute
@@ -172,7 +171,7 @@ audio
 		display: inline-block
 		cursor: pointer
 		&:hover
-			border: 2px solid black
+			border: 1px solid black
 		div
 			padding-top: 100%
 			display: block
@@ -192,37 +191,43 @@ audio
 
 
 
-#media-lightbox
+.gallery-album-load
 	display: none
-	background-color: rgba(12, 12, 12, 0.8)
-	width: 100%
-	height: 100%
-	position: absolute
-	top: 0
-	left: 0
-	z-index: 100
-	.lightbox-gal
+	.media-back-button
+		width: auto
+		padding: 5px
+		cursor: pointer
+	a
 		position: relative
-		background-color: $black
-		width: 90%
-		height: 80%
-		margin: 50px auto
-		padding-top: 50px
-		overflow-y: auto
-		img
-			max-width: 22%
-			margin-left: 2.2%
-			vertical-align: top
-#closeButton
-	display: none
-	position: absolute
-	top: 6%
-	right: 6%
-	color: $white
-	font-size: 24px
-	cursor: pointer
-	padding: 5px
-	z-index: 400
+		display: inline-block
+		width: 22%
+		vertical-align: top
+		&:nth-child(1),
+		&:nth-child(5),
+		&:nth-child(9)
+			margin-left: 2%
+			margin-right: 0.5%
+		&:nth-child(2),
+		&:nth-child(3),
+		&:nth-child(6),
+		&:nth-child(7)
+			margin-left: 0.5%
+			margin-right: 0.5%
+		&:nth-child(4),
+		&:nth-child(8),
+		&:nth-child(12)
+			margin-left: 0.5%
+			margin-right: 2%
+		button
+			background-color: transparent
+			&:hover
+				background-color: transparent
+.mfp-arrow
+	&, .mfp-prevent-close, .mfp-arrow-right, .mfp-arrow-left
+		background-color: transparent
+.mfp-close, .mfp-prevent-close, .mfp-arrow-right, .mfp-arrow-left
+	&:hover
+		background-color: transparent
 
 
 // typography

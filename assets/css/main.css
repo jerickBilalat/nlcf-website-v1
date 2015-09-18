@@ -1102,8 +1102,7 @@ figure.effect-julia:hover p {
 .main-header {
   position: relative;
   height: auto;
-  background-color: #F3F3F3;
-  padding-bottom: 30px;
+  background-color: #fff;
 }
 
 .top-info-bar {
@@ -1367,9 +1366,14 @@ figure.effect-julia:hover p {
 }
 
 .intro-paragraph {
-  margin: 20px 10px;
+  margin: 30px 0 20px;
   border-top: 1px solid gray;
   border-bottom: 1px solid gray;
+}
+@media(max-width: 600px) {
+  .intro-paragraph {
+    margin-top: 40px;
+  }
 }
 .intro-paragraph::after {
   clear: both;
@@ -1387,6 +1391,7 @@ figure.effect-julia:hover p {
   display: none;
 }
 .intro-paragraph p {
+  text-align: center;
   width: 85%;
   margin: 20px auto 10px;
   padding-right: 20px;
@@ -1410,7 +1415,7 @@ figure.effect-julia:hover p {
 }
 @media (max-width: 375px) {
   .intro-paragraph p {
-    margin: 0 5px 10px;
+    padding: 0 10px;
     width: 100%;
     font-size: 0.9em;
   }
@@ -1430,6 +1435,7 @@ figure.effect-julia:hover p {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
+  margin-top: 20px;
 }
 .full-title::after {
   clear: both;
@@ -1462,8 +1468,9 @@ figure.effect-julia:hover p {
 }
 
 .border {
-  border-bottom: 1px solid gray;
-  margin-bottom: 40px;
+  border-bottom: 4px solid #fc0203;
+  margin: 0 auto 40px;
+  width: 83%;
 }
 
 @media(max-width: 768px) {
@@ -1484,7 +1491,26 @@ figure.effect-julia:hover p {
 .slick-dots li button::before {
   font-size: 12px;
 }
-
+@media(max-width: 540px) {
+  .slick-dots li button::before {
+    font-size: 10px;
+  }
+}
+@media(max-width: 540px) {
+  .slick-dots {
+    bottom: 85%;
+  }
+}
+@media(max-width: 479px) {
+  .slick-dots {
+    left: 35%;
+  }
+}
+@media(max-width: 400px) {
+  .slick-dots {
+    bottom: 80%;
+  }
+}
 .about-main-content {
   float: left;
   display: block;
@@ -1671,11 +1697,12 @@ figure.effect-julia:hover p {
 
 .back {
   width: 20%;
-  border: 1px solid #000;
   margin-bottom: 20px;
   color: #000;
   text-shadow: 1px 1px 1px #000;
   font-size: 24px;
+  text-align: left;
+  padding: 0;
 }
 @media(max-width: 980px) {
   .back {
@@ -1809,6 +1836,11 @@ figcaption p.view-more,
   text-shadow: none;
 }
 
+.intro-paragraph-groups {
+  border-top: none;
+  margin-top: 0;
+}
+
 /*Calendar Layout */
 .ft h2 {
   text-align: center;
@@ -1851,7 +1883,19 @@ table td {
   background-color: white;
   color: black;
 }
-
+@media(max-width: 340px) {
+  #month-selector a {
+    border-radius: 5px;
+  }
+}
+@media(max-width: 359px) {
+  #month-selector {
+    margin-left: 0;
+  }
+  #month-selector:first-child a:first-child {
+    margin-left: 5px;
+  }
+}
 .month-events-load {
   display: none;
 }
@@ -1913,13 +1957,14 @@ table td {
 
 /*End Calendar Styles & layout */
 .events-side-info {
-  margin-top: 35px;
+  margin-top: 62px;
 }
 .events-side-info p {
   font-size: 12px;
 }
 @media(max-width: 768px) {
   .events-side-info {
+    margin-top: 20px;
     float: left;
     display: block;
     margin-right: 2.35765%;
@@ -1929,6 +1974,13 @@ table td {
     margin-right: 0;
   }
 }
+#todayDate {
+  font-weight: bold;
+  display: inline-block;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
 .sermon {
   position: relative;
 }
@@ -2038,10 +2090,11 @@ table td {
 
 #audio1, #audio2 {
   width: 90%;
-  margin: 0 auto;
+  margin: 10px auto;
   border: 2px solid #848484;
   border-radius: 10px;
   padding-bottom: 10px;
+  background-color: rgba(134, 135, 134, 0.8);
 }
 #audio1 h4, #audio2 h4 {
   color: white;
@@ -2054,10 +2107,6 @@ table td {
 #audio1 p, #audio2 p {
   margin-bottom: 5px;
   color: white;
-}
-
-#audio1 {
-  margin-bottom: 20px;
 }
 
 .audio_info {
@@ -2104,13 +2153,13 @@ audio {
   background-image: url(../img/pages/page-media/wedding.jpg);
 }
 .event-figure-cont:nth-child(2) .gallery-thumb {
-  background-image: url("../img/pages/page-media/familyday2015(2).jpg");
+  background-image: url("../img/pages/page-media/familyday.jpg");
 }
 .event-figure-cont:nth-child(3) .gallery-thumb {
   background-image: url("../img/pages/page-media/fathersday2015(3).jpg");
 }
 .event-figure-cont:nth-child(4) .gallery-thumb {
-  background-image: url(../img/pages/page-media/wedding.jpg);
+  background-image: url(../img/pages/page-media/familycamp.jpg);
 }
 .event-figure-cont h6 {
   position: absolute;
@@ -2136,7 +2185,7 @@ audio {
   cursor: pointer;
 }
 .event-figure-cont .gallery-thumb:hover {
-  border: 2px solid black;
+  border: 1px solid black;
 }
 .event-figure-cont .gallery-thumb div {
   padding-top: 100%;
@@ -2158,41 +2207,45 @@ audio {
     margin-right: 2%;
   }
 }
-#media-lightbox {
+.gallery-album-load {
   display: none;
-  background-color: rgba(12, 12, 12, 0.8);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 100;
 }
-#media-lightbox .lightbox-gal {
+.gallery-album-load .media-back-button {
+  width: auto;
+  padding: 5px;
+  cursor: pointer;
+}
+.gallery-album-load a {
   position: relative;
-  background-color: #111;
-  width: 90%;
-  height: 80%;
-  margin: 50px auto;
-  padding-top: 50px;
-  overflow-y: auto;
-}
-#media-lightbox .lightbox-gal img {
-  max-width: 22%;
-  margin-left: 2.2%;
+  display: inline-block;
+  width: 22%;
   vertical-align: top;
 }
+.gallery-album-load a:nth-child(1), .gallery-album-load a:nth-child(5), .gallery-album-load a:nth-child(9) {
+  margin-left: 2%;
+  margin-right: 0.5%;
+}
+.gallery-album-load a:nth-child(2), .gallery-album-load a:nth-child(3), .gallery-album-load a:nth-child(6), .gallery-album-load a:nth-child(7) {
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+}
+.gallery-album-load a:nth-child(4), .gallery-album-load a:nth-child(8), .gallery-album-load a:nth-child(12) {
+  margin-left: 0.5%;
+  margin-right: 2%;
+}
+.gallery-album-load a button {
+  background-color: transparent;
+}
+.gallery-album-load a button:hover {
+  background-color: transparent;
+}
 
-#closeButton {
-  display: none;
-  position: absolute;
-  top: 6%;
-  right: 6%;
-  color: #fff;
-  font-size: 24px;
-  cursor: pointer;
-  padding: 5px;
-  z-index: 400;
+.mfp-arrow, .mfp-arrow .mfp-prevent-close, .mfp-arrow .mfp-arrow-right, .mfp-arrow .mfp-arrow-left {
+  background-color: transparent;
+}
+
+.mfp-close:hover, .mfp-prevent-close:hover, .mfp-arrow-right:hover, .mfp-arrow-left:hover {
+  background-color: transparent;
 }
 
 .right-full-title {
@@ -2218,6 +2271,7 @@ audio {
   display: block;
   margin-right: 2.35765%;
   width: 57.35098%;
+  padding-top: 20px;
 }
 .contact-page-body .contact-info-cont:last-child {
   margin-right: 0;
@@ -2227,6 +2281,7 @@ audio {
   display: block;
   margin-right: 2.35765%;
   width: 40.29137%;
+  padding-right: 10px;
 }
 .contact-page-body .contact-form-cont:last-child {
   margin-right: 0;
@@ -2257,6 +2312,13 @@ audio {
 }
 .contact-info-cont {
   border-right: 2px solid #ddd;
+  margin-bottom: 30px;
+}
+@media(max-width: 600px) {
+  .contact-info-cont {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+  }
 }
 .contact-info-cont div {
   padding: 0 10px;
@@ -2278,20 +2340,158 @@ audio {
   margin-top: 10px;
   font-size: 0.9em;
 }
-.contact-info-cont .contact-info .tel {
+.contact-info-cont .contact-info .info-buttons {
+  display: inline-block;
   margin-bottom: 20px;
+  margin-top: 30px;
 }
-.contact-info-cont .contact-info .tel a {
+.contact-info-cont .contact-info .info-buttons a {
   color: gray;
   border: 1px solid gray;
   border-radius: 5px;
-  padding: 5px;
+  padding: 10px;
 }
-
+@media(max-width: 753px) {
+  .contact-info-cont .contact-info .info-buttons:nth-child(5) {
+    margin-top: 10px;
+  }
+}
+@media(max-width: 285px) {
+  .contact-info-cont .contact-info .info-buttons:nth-child(4) {
+    margin-top: 10px;
+  }
+}
 .contact-form-cont {
   margin-top: 20px;
   padding-left: 10px;
 }
 .contact-form-cont .contact-form {
   width: 100%;
+}
+
+.pastor-page-body {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pastor-page-body::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.pastor-page-body .pastor-info-cont {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  padding-top: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-right: 2px solid #ddd;
+}
+.pastor-page-body .pastor-info-cont:last-child {
+  margin-right: 0;
+}
+.pastor-page-body .aside-info-cont {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  padding-right: 10px;
+  padding-top: 20px;
+}
+.pastor-page-body .aside-info-cont:last-child {
+  margin-right: 0;
+}
+.pastor-page-body .aside-info-cont .aside-info {
+  margin-bottom: 20px;
+}
+@media(max-width: 600px) {
+  .pastor-page-body .pastor-info-cont {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .pastor-page-body .pastor-info-cont:last-child {
+    margin-right: 0;
+  }
+  .pastor-page-body .aside-info-cont {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    padding-top: 10px;
+  }
+  .pastor-page-body .aside-info-cont:last-child {
+    margin-right: 0;
+  }
+  .pastor-page-body .aside-info-cont .aside-info {
+    float: left;
+    margin-left: 10px;
+  }
+}
+.pastor-info-cont .pastor-card {
+  vertical-align: top;
+}
+.pastor-info-cont .pastor-card .pastor-img {
+  display: inline-block;
+}
+.pastor-info-cont .pastor-card .pastor-img img {
+  width: 170px;
+  height: 180px;
+  border: 2px solid #ddd;
+  padding: 5px;
+}
+@media(max-width: 740px) {
+  .pastor-info-cont .pastor-card .pastor-img {
+    display: block;
+  }
+  .pastor-info-cont .pastor-card .pastor-img img {
+    display: block;
+    margin: 0 auto 10px;
+  }
+}
+.pastor-info-cont .pastor-card .pastor-contact-info {
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: top;
+}
+.pastor-info-cont .pastor-card .pastor-contact-info .info-buttons {
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+.pastor-info-cont .pastor-card .pastor-contact-info .info-buttons a {
+  color: gray;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.aside-info-cont .aside-info {
+  padding: 5px;
+  border-bottom: 2px solid #ddd;
+}
+.aside-info-cont .aside-info .info-buttons {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.aside-info-cont .aside-info .info-buttons a {
+  color: gray;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 5px;
+}
+@media(max-width: 600px) {
+  .aside-info-cont {
+    border-top: 2px solid #ddd;
+  }
+  .aside-info-cont .aside-info {
+    padding: 5px;
+    padding-right: 10px;
+  }
 }

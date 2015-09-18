@@ -1,22 +1,16 @@
 
-$(document).ready(function($) {
+jQuery(function($) {
+	animsition();
 	eventsBlt();
 	ministriesBlt();
 	ministriesLoad();
 	mediaLoad();
-	mediaLightBox();
+	albumLoad();
 	sermonBlt();
-	closeButton();
-	$('#mobileNav').slicknav();
-	$('.slick-slider').slick({
-		dots: true,
-		autoplay: true,
-		autoplaySpeed: 3000,
-	});
-	initMap();
+	displayTimeDate();
+	mobileNav();
+	
 });
-
-
 
 // Event page functions
 function eventsBlt() {
@@ -27,13 +21,21 @@ function eventsBlt() {
 			spinner = '<div class="loader">Loading...</div>',
 			calendarLoad = '../pages/calendar/'+newFolder+'.html',
 			monthEventsLoad = '../pages/calendar-events/'+newFolder+'.html';			
-		event.preventDefault();
 		$('.selected-month').removeClass('selected-month');
 		$this.toggleClass('selected-month');
 		$('.current-month').css('display', 'none');
 		$('.month-events-load').load(monthEventsLoad);
 		$('.calendar-load').css('display', 'block').load(calendarLoad);
 	});
+}
+
+function displayTimeDate() {
+	var today = new Date();
+	// What happens next depends on whether you want UTC or locale time...
+	// assuming locale time in this example...
+	$('#todayTime').html( today.getHours() + ':' + today.getMinutes());
+	$('#todayWeek').html(today.toDateString().substring(0,3));
+	$('#todayDate').html( today.toDateString() );
 }
 
 // Minitries  functions
@@ -44,15 +46,15 @@ function ministriesBlt() {
 			newHTML = $this.data('folder');
 		$('.full-title').html('<h2>'+newHTML+'</h2>');
 		// $('.blt').css('left','-100%');
-		$('.column-1').animate({width: 0}, 500);
+		$('.column-1').fadeOut();
 		$('html, body').animate({
 			scrollTop: $('.main-header').offset().top
 		}, 1000);
 		$('.column-2').show();
 	});
 	$('.column-2').on('click', '.back', function() {
-		$('.column-1').animate({width: "50%"}, 500);
-		$('.full-title').html('<h2>Ministry</h2>');
+		$('.column-1').fadeIn();
+		$('.full-title').html('<h2>Ministries</h2>');
 		$('.blt').css('left','0%');
 		$('.ministry-gallery-column figure:last-child').show();
 	});
@@ -86,46 +88,56 @@ function sermonBlt() {
 	$('.sermon-buttons-cont').on('click', '.next-button', function() {
 		$('.sermons-blt').css('left', '-100%');
 		$('.prev-button').addClass('active');
-		console.log('test');
 	});
 	$('.sermon-buttons-cont').on('click', '.active', function() {
 		$('.sermons-blt').css('left', '0%');
-		console.log('test');
 	});
 }
 
-function mediaLightBox() {
+function albumLoad() {
 	$.ajaxSetup({ cache: true });
-	$('#media-photos').on('click', 'p', function() {
-		var $this = $(this), 
+	$('.gallery-thumb').on('click', '.show-album', function() {
+		var $this = $(this),
 			newFolder = $this.data('folder'),
+			spinner = '<div class="loader">Loading...</div>',
 			newHTML = '../pages/media-pages/'+newFolder+'.html';
-		$('#media-lightbox').css('display', 'initial').load(newHTML);
-		$('#closeButton').css('display', 'initial');
+		$('.photo-gal').fadeOut();
+		$('.gallery-album-load').fadeIn().html(spinner).load(newHTML);
+	});
+	$('.gallery-album-load').on('click', '.media-back-button', function() {
+		$('.gallery-album-load').fadeOut();
+		$('.photo-gal').fadeIn();
 	});
 }
 
-function closeButton() {
-	$('#closeButton').on('click', function() {
-		$('#media-lightbox').css('display', 'none');
-		$('body').css('overflow', 'initial');
-		$(this).css('display', 'none');
-	});
+// jquery plugins
+
+// page transition function
+function animsition() {
+	$(".animsition").animsition({
+    inClass: 'fade-in-left-lg',
+    outClass: 'fade-out-left-lg',
+    inDuration: 1500,
+    outDuration: 800,
+    linkElement: '.animsition-link',
+    // e.g. linkElement: 'a:not([target="_blank"]):not([href^=#])'
+    loading: true,
+    loadingParentElement: 'body', //animsition wrapper element
+    loadingClass: 'animsition-loading',
+    unSupportCss: [
+      'animation-duration',
+      '-webkit-animation-duration',
+      '-o-animation-duration'
+    ],
+    //"unSupportCss" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+    //The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+    overlay : false,
+    overlayClass : 'animsition-overlay-slide',
+    overlayParentElement : 'body'
+  });
 }
 
-function initMap() {
-  var myLatLng = {lat: 45.039746, lng: -93.180781};
-
-  var map = new google.maps.Map(document.getElementById('contactMap'), {
-    zoom: 16,
-    center: myLatLng,
-    scrollwheel: false
-  });
-
-  var marker = new google.maps.Marker({
-    position: myLatLng,
-    map: map,
-    title: 'Hello World!'
-  });
+// mobile navigation function
+function mobileNav() {
+	$('#mobileNav').slicknav();
 }
-

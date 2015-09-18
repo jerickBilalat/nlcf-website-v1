@@ -12,7 +12,7 @@
             E-mail: jrk@yahoo.com
     *********************************
     -->
-
+    <meta charset="utf-8">
     <title>NLCF</title>
     <!--information from "http://www.iacquire.com/blog/18-meta-tags-every-webpage-should-have-in-2013"-->
     <meta name="description" content="155 characters of message mathcing text with a call to action goes here">
@@ -33,14 +33,14 @@
     <meta name="twitter:image" content="">
     <!--their are optional twitter tags-->
     <!--for google+ use schema.org see article for more details-->
-    <meta charset="utf-8">
-    <title>NLCF</title>
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="../assets/js/slicknav/slicknav.css">
+    <link rel="stylesheet" href="../assets/js/magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" href="../assets/js/animsition/animsition.min.css">
     <link rel="stylesheet" href="../assets/css/main.css">
   </head>
 
-  <body>
+  <body class="animsition">
 
 <!-- Start main-header -->
       <header class="row main-header">
@@ -51,7 +51,7 @@
          target="_blank" title="New Life In Chirst Location">Go to map</a>
          </span>
           <span>
-            <a href="" title="New life in Christ Small Groups">Join our Small Group</a>
+            <a href="smallgroups.html" class="animsition-link" title="New life in Christ Small Groups">Join our Small Groups</a>
           </span>
         </div>
         <div class="logo main-logo">
@@ -64,31 +64,31 @@
           <ul>
               <li>
                 <div class="nav-item-cont">
-                  <a href="../index.html">Home</a>
+                  <a href="../index.html" class="animsition-link">Home</a>
                 </div>
               </li>
               <li>
                 <div class="nav-item-cont">
-                  <a href="../pages/about.html">About</a>
+                  <a href="about.html" class="animsition-link">About</a>
                 </div>
               </li>
               <li>
                 <div class="nav-item-cont">
-                  <a href="../pages/ministries.html">Ministries</a></div>
+                  <a href="ministries.html" class="animsition-link">Ministries</a></div>
               </li>
               <li>
                 <div class="nav-item-cont">
-                  <a href="../pages/events.html">Events</a>
+                  <a href="events.html" class="animsition-link">Events</a>
                 </div>
               </li>
               <li>
                 <div class="nav-item-cont">
-                  <a href="../pages/media.html" class="selected">Media</a>
+                  <a href="media.html" class="selected animsition-link">Media</a>
                 </div>
               </li>
               <li>
                 <div class="nav-item-cont">
-                  <a href="../pages/contact.html">Contact</a>
+                  <a href="contact.html" class="animsition-link">Contact</a>
                 </div>
               </li>
           </ul>
@@ -105,19 +105,19 @@
                   <a href="../index.html">Home</a>
               </li>
               <li>
-                  <a href="../pages/about.html">About</a>
+                  <a href="about.html">About</a>
               </li>
               <li>
-                  <a href="../pages/ministries.html">Ministries</a>
+                  <a href="ministries.html">Ministries</a>
               </li>
               <li>
-                  <a href="../pages/events.html">Events</a>
+                  <a href="events.html">Events</a>
               </li>
               <li>
-                  <a href="../pages/media.html" class="selected">Media</a>
+                  <a href="media.html" class="selected">Media</a>
               </li>
               <li>
-                  <a href="../pages/contact.html">Contact</a>
+                  <a href="contact.html">Contact</a>
               </li>
           </ul>
         </nav>
@@ -136,8 +136,9 @@
               <div class="audio_wrapper">
                 <div id="audio1">
                   <h4>Latest Sermon</h4>
-                  <p class="audio_info"><strong>Febuary 22, 2015 |</strong> 
-                  Series on Galatians Part 4
+                  <p class="audio_info"><strong>September 13, 2015 |</strong> 
+                  Series on Galatians Part 6<br>
+                  This is a test audio, we will update the right sermon as soon as possible
                   </p>
                   <audio controls>
                       <source src="../assets/audio/portrait_marraige.mp3" type="audio/mp3">
@@ -237,34 +238,35 @@
         <figure class="event-figure-cont">
           <h6>Wedding</h6>
           <span></span>
-          <div class="gallery-thumb" data-folder="wedding-lightbox">
-            <div></div>
+          <div class="gallery-thumb">
+            <div class="show-album" data-folder="wedding-gal"></div>
           </div>
         </figure>
         <figure class="event-figure-cont">
           <h6>Family Day</h6>
           <span></span>
-          <div class="gallery-thumb" data-folder="wedding-lightbox">
-            <div></div>
+          <div class="gallery-thumb">
+            <div class="show-album" data-folder="family-day-gal"></div>
           </div>
         </figure>
         <figure class="event-figure-cont">
           <h6>Fathers' Day</h6>
           <span></span>
-          <div class="gallery-thumb" data-folder="wedding-lightbox">
-            <div></div>
+          <div class="gallery-thumb">
+            <div class="show-album" data-folder="fathers-day-gal"></div>
           </div>
         </figure>
         <figure class="event-figure-cont">
           <h6>Family Camp</h6>
           <span></span>
-          <div class="gallery-thumb" data-folder="wedding-lightbox">
-            <div></div>
+          <div class="gallery-thumb">
+            <div class="show-album" data-folder="family-camp-gal"></div>
           </div>
         </figure>
       </div>
+      <div class="row gallery-album-load parent-container">
+      </div>
     </section>
-    <div id="media-lightbox">Loading....</div>
 
 
 
@@ -285,7 +287,29 @@
     </footer>
 <!-- End footer -->
   <script type="text/javascript" src="../assets/js/jquery-2.1.4.min.js"></script>
+  
   <script type="text/javascript" src="../assets/js/slicknav/jquery.slicknav.min.js"></script>
+  <script src="../assets/js/magnific-popup/jquery.magnific-popup.js"></script>
+  <script type="text/javascript" src="../assets/js/animsition/jquery.animsition.min.js"></script>
   <script type="text/javascript" src="../assets/js/apps.js"></script>
+  <script type="text/javascript">
+    jQuery(function($) {
+      $('.parent-container').magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        gallery: {
+          enabled: true,
+          arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>', // markup of an arrow button
+          tPrev: 'Previous (Left arrow key)', // title for left button
+          tNext: 'Next (Right arrow key)', // title for right button
+          tCounter: '<span class="mfp-counter">%curr% of %total%</span>' // markup of counter
+          },
+        image: {
+          verticalFit: true, // Fits image in area vertically
+          tError: '<a href="%url%">The image</a> could not be loaded.' // Error message
+          }
+    });
+  });
+  </script>
 	</body>
 </html>
