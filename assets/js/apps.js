@@ -48,7 +48,7 @@ function ministriesBlt() {
 		// $('.blt').css('left','-100%');
 		$('.column-1').fadeOut();
 		$('html, body').animate({
-			scrollTop: $('.main-header').offset().top
+			scrollTop: $('.full-title h2').offset().top
 		}, 1000);
 		$('.column-2').show();
 	});
@@ -61,25 +61,38 @@ function ministriesBlt() {
 }
 
 function ministriesLoad() {
-	$.ajaxSetup({ cache: true });
+	$.ajaxSetup({ cache: false });
 	$('figure, figcaption').on('click', '.view-more', function() {
 		var $this = $(this),
 			newFolder = $this.data('folder'),
 			spinner = '<div class="loader">Loading...</div>',
 			newHTML = '../pages/ministries-pages/'+newFolder+'.html';
-		$('.column-2').html(spinner).load(newHTML);
+		$.ajax(newHTML, {
+			success: function(response) {
+				$('.column-2').html(response);
+			},
+			error: function() {
+				alert("Unable to complete request. Please try again.")
+			}
+		});
 	});
 }
 
 // Media functions
 function mediaLoad() {
-	$.ajaxSetup({ cache: true });
 	$('.sermon-buttons-cont').on('click', '.series-selector', function() {
 		var $this = $(this),
 			newFolder = $this.data('folder'),
 			spinner = '<div class="loader">Loading...</div>',
 			newHTML = '../pages/media-pages/'+newFolder+'.html';
-		$('#sermonLoad').html(spinner).load(newHTML);
+		$.ajax(newHTML, {
+			success: function(response) {
+				$('#sermonLoad').html(response);
+			},
+			error: function() {
+				alert("Unable to complete request. Please try again.")
+			}
+		});
 	});
 }
 
@@ -95,7 +108,7 @@ function sermonBlt() {
 }
 
 function albumLoad() {
-	$.ajaxSetup({ cache: true });
+	$.ajaxSetup({ cache: false });
 	$('.gallery-thumb').on('click', '.show-album', function() {
 		var $this = $(this),
 			newFolder = $this.data('folder'),

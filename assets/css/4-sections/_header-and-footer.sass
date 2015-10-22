@@ -156,7 +156,6 @@
 #mobileNav
 	height: 0
 	overflow: hidden
-.mobile-nav-cont
 .slicknav_menu
 	@media(min-width: 768px)
 		display: none
@@ -172,43 +171,25 @@
 .main-footer
 	position: relative
 	background-color: $darkgreen
-	height: 60px
-	display: flex
-	justify-content: center
+	height: auto
+	padding-bottom: 10px
 
-	.social-media
-		position: absolute
-		top: 5px
+	.social-media-cont
 		display: block
-		left: 20px
-		width: auto
+		width: 100%
+		text-align: center
 		p
-			position: relative
-			left: 0
 			font-size: 0.8em
-			margin-left: 5px 
-		a img
-			position: relative
-			right: 0
-			margin-left: 5px
-			+size(30px)
-
-	.footer-logo
-		position: absolute
-		left: 50%
-		display: block
-		margin: 0 auto
-		+size(40px)
-		+margin(10px 20px null 20px)
-		img
-			position: relative
-			left: -50%
-	p
-		position: absolute
-		top: 50%
-		right: 20px
-		display: block
-		font-size: 0.8em 
-		margin: 0
-
-	
+			margin: 0
+		a 
+			&:last-child
+				margin-left: 5px
+			img
+				+size(30px)
+			
+	.copyright-cont
+		width: 100%
+		font-size: 0.8em
+		text-align: center
+		p
+			margin: 0
