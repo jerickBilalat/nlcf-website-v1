@@ -235,26 +235,29 @@
 <!-- End footer -->
     <script type="text/javascript" src="../assets/js/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="../assets/js/slicknav/jquery.slicknav.min.js"></script>
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?signed_in=true&callback=initMap"></script>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script type="text/javascript" src="../assets/js/animsition/jquery.animsition.min.js"></script>
     <script type="text/javascript" src="../assets/js/apps.js"></script>
-    <script type="text/javascript">
-      function initMap() {
-  var myLatLng = {lat: 45.039746, lng: -93.180781};
 
-  var map = new google.maps.Map(document.getElementById('contactMap'), {
-    zoom: 16,
-    center: myLatLng,
-    scrollwheel: false
-  });
+    <script>
+      function initialize() {
+        var mapCanvas = document.getElementById('contactMap'),
+            myLatLng = new google.maps.LatLng(45.039746, -93.180781);
+        var mapOptions = {
+          center: myLatLng,
+          zoom: 16,
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+          scrollwheel: false
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions);
 
-  var marker = new google.maps.Marker({
-    position: myLatLng,
-    map: map,
-    title: 'Hello World!'
-  });
-  };
+        var marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: '3245 New Brighton Rd, Arden Hills MN'
+        });
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
     </script>
 	</body>
 </html>
