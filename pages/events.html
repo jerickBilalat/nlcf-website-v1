@@ -23,12 +23,12 @@
     <meta property="og:tiltle" content="NLCF Officail Website"/>
     <meta property="og:type" content="article"/>
     <meta property="og:image" content="../assets/main-header/img/logo_thumb2.jpg"/><!--make sure the image is square-->
-    <meta property="og:url" content="http://www.nlcfmn.com.s3-website-us-east-1.amazonaws.com/index.html"/>
+    <meta property="og:url" content="http://www.nlcfmn.org/index.html"/>
     <meta property="og:description" content="New Life In Christ Fellowship, located in Arden Hills, MN 55112, is a Filipino American Church with a mission to know Christ and to make Him Known.">
     <meta property="fb:admins" content="1396793350"/><!--specify the facebook user IDs in theof those users you want to have access.-->
     <!--twitter-->
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:url" content="http://www.nlcfmn.com.s3-website-us-east-1.amazonaws.com/index.html">
+    <meta name="twitter:url" content="http://www.nlcfmn.org/index.html">
     <meta name="twitter:title" content="New Life In Christ Fellowship | Filipino American Chruch"><!--title of the page limeted to 70 characters-->
     <meta name="twitter:description" content="New Life In Christ Fellowship, located in Arden Hills, MN 55112, is a Filipino American Church with a mission to know Christ and to make Him Known."><!--important to put good description-->
     <meta name="twitter:image" content="../assets/main-header/img/logo_thumb2.jpg">
@@ -253,7 +253,7 @@
       <section class="ft-col ft-col-2 events-side-info">
         <h4>Upcoming Event</h4>
         <p>
-        <strong>October 4 | </strong><em>Church Workers' Appreciation Day</em><br>
+        <strong>October 8 | </strong><em>NLCF 5th Year Anniversary</em><br>
         </p>
         <h4>Featured Events</h4>
         <p>
@@ -278,7 +278,57 @@
       </section>
     </div>
 
+<!-- start event section -->
+<hr>
+    <section class="ft-event">
+      
+    <section>
+      <header class="ft-event-header">
+        <img src="../assets/img/featured-event.jpg">
+      </header>
+      <img src="../assets/img/pages/page-index/nlcfkids.png" alt="A heart to change the world musical">
+      <hr>
+      <p><span>Join Us</span> as we celebrate NLCF's 5th year aniversary through our children's musical <strong>"A Heart to change the World"</strong>, October 18, 2015. Please <em>RSVP</em> now.</p>
+    </section>
+    <aside>
+      <h2>RSVP</h2>
+      <form action="http://formspree.io/jrk.email@yahoo.com" method="Post">
+            <label for="name">Name/s or Family name</label>
+            <input type="text" id="name" name="name">
+            <label for="peopleAttending">Number of people attending</label>
+            <textarea id="peopleAttending" name="peopleAttending" maxlength="2"></textarea>
+            <label for="email">Email(optional)</label>
+            <input type="email" name="_replyto" id="email">
+            <label for="message">Questions(optional)</label>
+            <textarea id="message" name="questions"></textarea>
+            <!-- under construction -->
+            <!-- <input type="hidden" name="_next" value="//site.io/thanks.html" /> -->
+            <input type="hidden" name="_subject" value="New submission!" />
+            <input type="text" name="_gotcha" style="display:none" />
+            <input type="submit" value="Send">
+          </form>
+      <h3>Contact Info</h3>
+      <div>
+        <div id="contactMap"></div>
+      </div>
+      <div class="contact-info">
+        <a href="" class="address">3245 New Brighton Rd.<br>Arden Hills MN 5512</a>
+        <div class="info-buttons">
+          <a href="tel:763-515-3294">Phone:(763)515-3294</a>
+        </div>
+        <div class="info-buttons">
+          <a href="https://www.facebook.com/pages/New-Life-In-Christ-Fellowship-Twin-City-MN/163651137101710" target="_blank"  title="New life in Christ Fellowship Facebook Page">Facebook</a>
+        </div>
+        <div class="info-buttons">
+          <a href="mailto:nlcf.mediagroup@gmail.com">nlcf.mediagroup@gmail.com</a>
+        </div>
+      </div>
+    </aside>
+  </section>
+<!-- end featured event section -->
+
 <!-- start info-bar -->
+      <hr>
       <section class="info-bar row">
         <div class="info-bar-row row1 flex-cont">
           <div class="flex-cont-justify-center"><h4>New Life In Chirst<br>Fellowship</h4></div>
@@ -323,6 +373,7 @@
       </section>
       <!-- end info-bar -->
 
+
 <!-- Start footer -->
     <footer class="main-footer row flex-container">
       <div class="social-media-cont">    
@@ -339,6 +390,27 @@
   <script type="text/javascript" src="../assets/js/jquery-2.1.4.min.js"></script>
   <script type="text/javascript" src="../assets/js/slicknav/jquery.slicknav.min.js"></script>
   <script type="text/javascript" src="../assets/js/animsition/jquery.animsition.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js"></script>
   <script type="text/javascript" src="../assets/js/apps.js"></script>
+  <script>
+      function initialize() {
+        var mapCanvas = document.getElementById('contactMap'),
+            myLatLng = new google.maps.LatLng(45.039746, -93.180781);
+        var mapOptions = {
+          center: myLatLng,
+          zoom: 16,
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+          scrollwheel: false
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+
+        var marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: '3245 New Brighton Rd, Arden Hills MN'
+        });
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
 	</body>
 </html>
