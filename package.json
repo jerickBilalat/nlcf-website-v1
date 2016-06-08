@@ -25,16 +25,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jerickBilalat/portfolio.git"
+    "url": "https://github.com/jerickBilalat/NLCF-website-v2.git"
   },
   "keywords": [
-    "portfolio",
+    "NLCF-website-v2",
     "gulp",
     "sass",
     "browsersync"
   ],
   "bugs": {
-    "url": "https://github.com/jerickBilalat/portfolio/issues"
+    "url": "https://github.com/jerickBilalat/NLCF-website-v2/issues"
   },
-  "homepage": "https://github.com/jerickBilalat/portfolio#readme"
+  "homepage": "https://github.com/jerickBilalat/NLCF-website-v2#readme"
 }
