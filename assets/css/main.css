@@ -1400,8 +1400,12 @@ figure.effect-julia:hover p {
   width: 85%;
   margin: 20px auto 10px;
   padding-right: 20px;
+  padding-bottom: 20px;
   padding-left: 20px;
-  font-size: 1.2em;
+  font-size: 1.4em;
+  font-family: georgia, arial;
+  font-style: italic;
+  color: #818181;
 }
 @media (max-width: 664px) {
   .intro-paragraph p {
@@ -1468,6 +1472,10 @@ figure.effect-julia:hover p {
     line-height: 1.38;
   }
 }
+.small-group-title h2 {
+  padding-bottom: 0;
+}
+
 .right-full-title {
   max-width: 68em;
   margin-left: auto;
@@ -1617,6 +1625,103 @@ figure.effect-julia:hover p {
 @media(max-width: 400px) {
   .slick-dots {
     bottom: 80%;
+  }
+}
+.ft-event {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  background-color: #fff;
+}
+.ft-event:last-child {
+  margin-right: 0;
+}
+.ft-event::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.ft-event section {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  padding-left: 10px;
+}
+.ft-event section:last-child {
+  margin-right: 0;
+}
+.ft-event section p span {
+  color: #86B77A;
+  font-size: 28px;
+  font-weight: bold;
+  font-stretch: condensed;
+}
+.ft-event aside {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  color: white;
+  height: auto;
+  padding-right: 10px;
+}
+.ft-event aside:last-child {
+  margin-right: 0;
+}
+.ft-event aside h2, .ft-event aside h3 {
+  margin: 0;
+  color: white;
+  text-align: center;
+  background-color: #e30598;
+  border-radius: 10px;
+}
+.ft-event aside form {
+  padding: 10px;
+  background-color: #4EBAF9;
+  border-radius: 10px;
+}
+.ft-event aside form input, .ft-event aside form textarea {
+  color: #333;
+}
+.ft-event aside form input[type="submit"] {
+  color: white;
+}
+.ft-event aside form textarea[name="peopleAttending"] {
+  width: 60px;
+  height: 40px;
+  max-height: 40px;
+  min-height: 40px;
+}
+.ft-event aside .contact-info {
+  background-color: #4EBAF9;
+  border-radius: 10px;
+  padding: 10px;
+}
+.ft-event aside .contact-info a, .ft-event aside .contact-info p {
+  color: white;
+  border-color: white;
+}
+@media(max-width: 600px) {
+  .ft-event section, .ft-event aside {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  .ft-event section:last-child, .ft-event aside:last-child {
+    margin-right: 0;
+  }
+}
+@media(max-width: 600px) {
+  .ft-event section {
+    padding-right: 10px;
+  }
+}
+@media(max-width: 600px) {
+  .ft-event aside {
+    padding-left: 10px;
   }
 }
 .about-main-content {
@@ -2213,7 +2318,7 @@ table td {
   padding-top: 5%;
 }
 
-#audio1, #audio2, #audio3, audio4 {
+#audio1, #audio2, #audio3, #audio4, #audio5 {
   width: 90%;
   margin: 10px auto;
   border: 2px solid #848484;
@@ -2221,15 +2326,15 @@ table td {
   padding-bottom: 10px;
   background-color: rgba(134, 135, 134, 0.8);
 }
-#audio1 h4, #audio2 h4, #audio3 h4, audio4 h4 {
+#audio1 h4, #audio2 h4, #audio3 h4, #audio4 h4, #audio5 h4 {
   color: white;
 }
 @media(max-width: 400px) {
-  #audio1 h4, #audio2 h4, #audio3 h4, audio4 h4 {
+  #audio1 h4, #audio2 h4, #audio3 h4, #audio4 h4, #audio5 h4 {
     margin: 0;
   }
 }
-#audio1 p, #audio2 p, #audio3 p, audio4 p {
+#audio1 p, #audio2 p, #audio3 p, #audio4 p, #audio5 p {
   margin-bottom: 5px;
   color: white;
 }
@@ -2448,11 +2553,13 @@ audio {
 .contact-info-cont div {
   padding: 0 10px;
 }
-.contact-info-cont div #contactMap {
+
+#contactMap {
   width: 100%;
   height: 300px;
 }
-.contact-info-cont .contact-info .address {
+
+.contact-info .address {
   font-size: 24px;
   font-weight: bold;
   color: gray;
@@ -2460,29 +2567,29 @@ audio {
   line-height: 1;
   margin-top: 20px;
 }
-.contact-info-cont .contact-info p {
+.contact-info p {
   margin-bottom: 10px;
   margin-top: 10px;
   font-size: 0.9em;
 }
-.contact-info-cont .contact-info .info-buttons {
+.contact-info .info-buttons {
   display: inline-block;
   margin-bottom: 20px;
   margin-top: 30px;
 }
-.contact-info-cont .contact-info .info-buttons a {
+.contact-info .info-buttons a {
   color: gray;
   border: 1px solid gray;
   border-radius: 5px;
   padding: 10px;
 }
 @media(max-width: 753px) {
-  .contact-info-cont .contact-info .info-buttons:nth-child(5) {
+  .contact-info .info-buttons:nth-child(5) {
     margin-top: 10px;
   }
 }
 @media(max-width: 285px) {
-  .contact-info-cont .contact-info .info-buttons:nth-child(4) {
+  .contact-info .info-buttons:nth-child(4) {
     margin-top: 10px;
   }
 }

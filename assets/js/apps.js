@@ -61,7 +61,7 @@ function ministriesBlt() {
 }
 
 function ministriesLoad() {
-	$.ajaxSetup({ cache: false });
+	$.ajaxSetup({ cache: true });
 	$('figure, figcaption').on('click', '.view-more', function() {
 		var $this = $(this),
 			newFolder = $this.data('folder'),
@@ -108,7 +108,7 @@ function sermonBlt() {
 }
 
 function albumLoad() {
-	$.ajaxSetup({ cache: false });
+	$.ajaxSetup({ cache: true });
 	$('.gallery-thumb').on('click', '.show-album', function() {
 		var $this = $(this),
 			newFolder = $this.data('folder'),
@@ -122,6 +122,7 @@ function albumLoad() {
 		$('.photo-gal').fadeIn();
 	});
 }
+
 
 // jquery plugins
 
