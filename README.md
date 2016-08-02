@@ -1,8 +1,8 @@
 # NLCF-website-v2
 
-Use this as a simple structure for a simple start to a simple site.
+Second version of the New Life and Chirst Fellowship website.
 
-Visit [www.nlcfmn.org/](http://nlcfmn.org) for more info.
+Visit [www.nlcfmn.org/](http://nlcfmn.org) to the current version of the website live.
 
 <img src="assets/img/logo.jpg"
 alt="New life in Chirst logo" />
